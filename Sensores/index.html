@@ -1,0 +1,87 @@
+[02:46, 16/3/2026] José: </div>
+[03:21, 16/3/2026] José: <!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Monitoreo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+
+<div id="login">
+
+<h2>Acceso al Sistema</h2>
+
+<input type="text" id="usuario" placeholder="Usuario">
+<input type="password" id="password" placeholder="Contraseña">
+
+<br><br>
+
+<button onclick="login()">Ingresar</button>
+
+<p id="error"></p>
+
+</div>
+
+
+<!-- SISTEMA -->
+
+<div id="sistema">
+
+<h1>Sistema de Monitoreo de Sensores</h1>
+
+
+<div class="contenedorSensores">
+
+
+<!-- SENSOR HUMEDAD -->
+
+<div class="sensorBox">
+
+<h3>Sensor de Humedad</h3>
+
+<input type="range" id="humedad" min="" max="20" value="0" oninput="actualizarHumedad()">
+
+<br><br>
+
+<input type="number" id="humedadManual" min="0" max="20" value="0" onchange="actualizarHumedadManual()">
+
+<p>Temperatura: <span id="valorHumedad">0</span>°</p>
+
+<div class="led" id="ledHumedad"></div>
+
+</div>
+
+
+
+<!-- SENSOR PROXIMIDAD -->
+
+<div class="sensorBox">
+
+<h3>Sensor de Proximidad</h3>
+
+<input type="range" id="proximidad" min="0" max="100" value="0" oninput="actualizarProximidad()">
+
+<br><br>
+
+<input type="number" id="proxManual" min="0" max="100" value="0" onchange="actualizarProximidadManual()">
+
+<p>Distancia: <span id="valorProx"0"</span> cm</p>
+
+<div class="led" id="ledProx"></div>
+
+</div>
+
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
